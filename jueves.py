@@ -89,16 +89,19 @@ print("             SU COMPRA SERÍA                ")
 print("                                            ")
 print("============================================")
 
-print("Lista de productos comprados")
-for producto in lista_productos:
-    
-    id = lista_productos.index(producto)
-    print(f"{id +1}. Nombre: {producto[0]} - Precio: {producto[1]} - Cantidad: {producto[2]} - Descuento%: {producto[3]} - Total: {producto[4]}")
-     
+def mostrar_lista (lista_productos,total):
+    print("Lista de productos comprados")
+    for producto in lista_productos:
+        
+        id = lista_productos.index(producto)
+        print(f"{id +1}. Nombre: {producto[0]} - Precio: {producto[1]} - Cantidad: {producto[2]} - Descuento%: {producto[3]} - Total: {producto[4]}")
+        
 print("Valor acumulado a pagar:", Total_general)    
 
 eliminar = int(input("Desea eliminar uno de los elementos? Indique el numero: "))
-del lista_productos[eliminar-1]
+eliminar = lista_productos.pop(eliminar -1)
+Total_general -= eliminar[4]
+
 
 print("El elemento ha sido eliminado con éxito")
 
@@ -115,18 +118,5 @@ while continuar:
             
     print("El total acumulado es:", Total_general)    
 
-print("============================================")
-print("                                            ")
-print("             SU COMPRA SERÍA                ")
-print("                                            ")
-print("============================================")
-
-print("Lista de productos comprados")
-for producto in lista_productos:
-    
-    id = lista_productos.index(producto)
-    print(f"{id +1}. Nombre: {producto[0]} - Precio: {producto[1]} - Cantidad: {producto[2]} - Descuento%: {producto[3]} - Total: {producto[4]}")
-     
-print("Valor acumulado a pagar:", Total_general)    
 
 
