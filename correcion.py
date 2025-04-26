@@ -79,7 +79,7 @@ while continuar:
     print("Esta es la lista de productos comprados")
     mostrar_lista(lista_productos, Total_general)
     
-#ahora mosgtramos el resumen de la compra
+#ahora mostramos el resumen de la compra
 while continuar:
     print("============================================")
     print("                                            ")
